@@ -43,15 +43,6 @@ int Triangle::check(int angle_A, int angle_B, int angle_C/*, int side_a, int sid
 	
 	return sum;
 }
-
-
-//void Triangle::print_info(Triangle*) {
-//	std::cout << get_name() << std::endl
-//		<< "Стороны: " << "a=" << get_side_a() << " " << "b=" << get_side_b() << " " << "c=" << get_side_c() << std::endl
-//		<< "Углы: " << "A=" << get_angle_A() << " " << "B=" << get_angle_B() << " " << "C=" << get_angle_C() << std::endl;
-//}
-
-//Прямоугольный треугольник(стороны 3, 4, 5; углы 30, 60, 90) создан
 void Triangle::print_info(Triangle*) {
 	std::cout << get_name() << "("
 		<< "Стороны: " << get_side_a() << ", " << get_side_b() << ", " << get_side_c() << " "
