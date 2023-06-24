@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "my exclusion_t.h"
 
 class Triangle {
 protected:
@@ -18,6 +19,6 @@ public:
 	int get_angle_C();
 	std::string get_name();
 	void print_info(Triangle*);
-
+	int check(int angle_A, int angle_B, int angle_C);
 
 };
