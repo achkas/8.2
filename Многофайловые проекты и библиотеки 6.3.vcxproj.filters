@@ -42,6 +42,12 @@
     <ClCompile Include="heirs my_exclusion_t.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="my exclusion_quadrangle.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="my exclusion_heirs_quadrangle.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Triangle.h">
@@ -66,6 +72,12 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="heirs my_exclusion_t.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="my exclusion_quadrangle.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="my exclusion_heirs_quadrangle.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

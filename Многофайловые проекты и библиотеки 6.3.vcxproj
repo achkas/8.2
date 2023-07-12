@@ -133,6 +133,8 @@
     <ClCompile Include="heirs parallelogram.cpp" />
     <ClCompile Include="heirs quadrangle.cpp" />
     <ClCompile Include="heirs square.cpp" />
+    <ClCompile Include="my exclusion_heirs_quadrangle.cpp" />
+    <ClCompile Include="my exclusion_quadrangle.cpp" />
     <ClCompile Include="quadrilateral.cpp" />
     <ClCompile Include="my exclusion_t.cpp" />
     <ClCompile Include="Triangle.cpp" />
@@ -144,6 +146,8 @@
     <ClInclude Include="heirs parallelogram.h" />
     <ClInclude Include="heirs quadrangle.h" />
     <ClInclude Include="heirs square.h" />
+    <ClInclude Include="my exclusion_heirs_quadrangle.h" />
+    <ClInclude Include="my exclusion_quadrangle.h" />
     <ClInclude Include="my exclusion_t.h" />
     <ClInclude Include="quadrilateral.h" />
     <ClInclude Include="Triangle.h" />

@@ -11,97 +11,114 @@
 #include "heirs square.h"
 #include "my exclusion_t.h"
 #include "heirs my_exclusion_t.h"
+#include "my exclusion_quadrangle.h"
+#include "my exclusion_heirs_quadrangle.h"
+
 
 int main()
 {
 	setlocale(LC_ALL, "ru");
 	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
-
-	Triangle t;
-	RightTriangle r;
-	IsoscelesTriangle i;
-	EquilateralTriangle e;
-
-	
-	
+	SetConsoleOutputCP(1251);	
 
 	try
 	{
-		t.check(t.get_angle_A(), t.get_angle_B(), t.get_angle_C());
+		Triangle t;
 		t.print_info(&t);
-		std::cout << std::endl;
-		
 	}
 	catch (const my_exclusion_t& ex)
 	{
-		std::cout << ex.what() << std::endl; 
-		return 0;
+		std::cout << ex.what() << std::endl;
+
 	}
 
-	try
+try
 	{
-		r.checkR( r.get_angle_C());
+	RightTriangle r;
 		r.print_info(&r);
-		std::cout << std::endl;
-
 	}
-	catch (const my_exclusion_tR & ex)
+	catch (const my_exclusion_tR& ex)
 	{
-		std::cout << ex.what() << std::endl;		
+		std::cout << ex.what() << std::endl;
+
 	}
 
 	try
 	{
-		i.checkI(i.get_angle_A(),  i.get_angle_C(), i.get_side_a(), i.get_side_c());
+		IsoscelesTriangle i;
 		i.print_info(&i);
-		std::cout << std::endl;
-
 	}
 	catch (const my_exclusion_tI& ex)
-	{ 
-		std::cout << ex.what() << std::endl;		
+	{
+		std::cout << ex.what() << std::endl;
+
 	}
 
 	try
 	{
-		e.checkE(e.get_angle_A(), e.get_angle_B(), e.get_angle_C(), e.get_side_a(), e.get_side_b(), e.get_side_c());
+		EquilateralTriangle e;
 		e.print_info(&e);
-		std::cout << std::endl;
-
 	}
 	catch (const my_exclusion_tE& ex)
 	{
-		std::cout << ex.what() << std::endl;		
+		std::cout << ex.what() << std::endl;
+
 	}
-	
 
+	try
+	{
+		quadrilateral w;
+		w.print_info(&w);
+	}
+	catch (const my_exclusion_quadrangle& ex)
+	{
+		std::cout << ex.what() << std::endl;
 
+	}
 
-	/*t.print_info(&t);
-	std::cout << std::endl;
-	r.print_info(&r);
-	std::cout << std::endl;
-	i.print_info(&i);
-	std::cout << std::endl;
-	e.print_info(&e);
-	std::cout << std::endl;*/
+	try
+	{
+		square s;
+		s.print_info(&s);
+	}
+	catch (const my_exclusion_square& ex)
+	{
+		std::cout << ex.what() << std::endl;
 
-	quadrilateral w;
-	square s;
-	rectangle rec;
-	parallelogram par;
-	rhombus rho;
+	}
 
-	/*w.print_info(&w);
-	std::cout << std::endl;
-	s.print_info(&s);
-	std::cout << std::endl;
-	rec.print_info(&rec);
-	std::cout << std::endl;
-	par.print_info(&par);
-	std::cout << std::endl;
-	rho.print_info(&rho);*/
+	try
+	{
+		rectangle rec;
+		rec.print_info(&rec);
+	}
+	catch (const my_exclusion_rectangle& ex)
+	{
+		std::cout << ex.what() << std::endl;
+
+	}
+
+	try
+	{
+		parallelogram par;
+		par.print_info(&par);
+	}
+	catch (const my_exclusion_parallelogram& ex)
+	{
+		std::cout << ex.what() << std::endl;
+
+	}
+
+	try
+	{
+		rhombus rho;
+		rho.print_info(&rho);
+	}
+	catch (const my_exclusion_rhombus& ex)
+	{
+		std::cout << ex.what() << std::endl;
+
+	}	
 
 	return 0;
 

@@ -2,16 +2,20 @@
 #include <iostream>
 #include "my exclusion_t.h"
 #include <exception>
-#include "heirs my_exclusion_t.h"
 
 Triangle::Triangle() {
 	side_a = 10;
 	side_b = 20;
 	side_c = 30;
-	angle_A =50;
+	angle_A = 50;
 	angle_B = 60;
 	angle_C = 70;
 	name = "Треугольник: ";
+
+	int sum = (angle_A + angle_B + angle_C);
+	if (sum != 180) { throw my_exclusion_t();
+	
+	}
 }
 int Triangle::get_side_a() {
 	return side_a;
@@ -36,15 +40,9 @@ std::string Triangle:: get_name() {
 }
 
 
-int Triangle::check(int angle_A, int angle_B, int angle_C/*, int side_a, int side_b, int side_c*/)
-{
-	int sum = (angle_A + angle_B + angle_C);
-	if (sum != 180) { throw my_exclusion_t(); }
-	
-	return sum;
-}
+
 void Triangle::print_info(Triangle*) {
-	std::cout << get_name() << "("
-		<< "Стороны: " << get_side_a() << ", " << get_side_b() << ", " << get_side_c() << " "
+	std::cout << get_name() << " " << "("
+		<< "Стороны: " << get_side_a() << ", " << get_side_b() << ", " << get_side_c() << "; "
 		<< "Углы: " << get_angle_A() << ", " << get_angle_B() << ", " << get_angle_C()<<")"<<" создан" << std::endl;
 }

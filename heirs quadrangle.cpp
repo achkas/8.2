@@ -1,5 +1,7 @@
 
 #include "heirs quadrangle.h"
+#include <iostream>
+#include "my exclusion_heirs_quadrangle.h"
 
 square::square() {
 	        side_a = 20;
@@ -11,7 +13,19 @@ square::square() {
 			angle_C = 90;
 			angle_D = 90;
 			name = "квадрат: ";
+
+			if (((side_a == side_b) && (side_b == side_c) && (side_c == side_d) && (side_d == side_a))
+				&& ((angle_A == 90) && (angle_B == 90) && (angle_C == 90) && (angle_D == 90))) {
+
+				std::cout;
+			}
+			else
+			{
+				throw my_exclusion_square();
+
+			}			
 }
+
 parallelogram::parallelogram() {
 	side_a = 20;
 	side_b = 30;
@@ -22,4 +36,15 @@ parallelogram::parallelogram() {
 	angle_C = 30;
 	angle_D = 40;
 	name = "Параллелограмм: ";
+
+	if (((side_a == side_c) && (side_b == side_d))
+		&& ((angle_A == angle_C) && (angle_B == angle_D)))
+	{
+		std::cout;
+	}
+	else
+	{
+		throw my_exclusion_parallelogram();
+
+	}
 }
